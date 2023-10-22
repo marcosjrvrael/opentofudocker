@@ -1,0 +1,8 @@
+.vscode
+.env
+plano
+
+*.tfstate
+*.tfstate.backup
+*.lock.hcl
+*.terraform
