@@ -1,5 +1,5 @@
 
-## About
+## Objective
 
 Run OpenTofu inside a Docker Image with a desired version,
 we will not use alpine as base image since it not install autocomplete,
@@ -10,4 +10,22 @@ if you want to use any other provider implement it as args on Dockerfile and Mak
 If you not pass any OpenTofu specific version it will get the last one deployed on Github.
 
 You can set AWS/Azure Credentials on .env file following .envexample, you can change also the opentofu version inside .env.
+
+## What is OpenTofu?
+
+OpenTofu is a open source fork of terraform since hashicorp has made it a non-open source anymore,
+you may find more details in https://www.linuxfoundation.org/press/announcing-opentofu
+
+## using opentofu
+
+There is no difference between the actual version (1.6.x) and opentofu (1.6.x) but in the future it can happen,
+but to run opentofu you will use .tf files, and run tofu command instead of terraform command.
+for example
+
+before
+`terraform plan -out plan`
+now
+`tofu plan -out plan`
+
+And so on...
 
