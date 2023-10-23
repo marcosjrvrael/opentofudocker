@@ -9,4 +9,5 @@ if you want to use any other provider implement it as args on Dockerfile and Mak
 
 If you not pass any OpenTofu specific version it will get the last one deployed on Github.
 
+You can set AWS/Azure Credentials on .env file following .envexample, you can change also the opentofu version inside .env.
 
