@@ -18,9 +18,9 @@ you may find more details in https://www.linuxfoundation.org/press/announcing-op
 
 ## using opentofu
 
-There is no difference between the actual version (1.6.x) and opentofu (1.6.x) but in the future it can happen,
+There is no difference between the actual version (1.6.x) of terraform and opentofu (1.6.x) but in the future it can happen,
 but to run opentofu you will use .tf files, and run tofu command instead of terraform command.
-for example
+for example:
 
 before
 `terraform plan -out plan`
