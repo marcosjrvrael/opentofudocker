@@ -15,6 +15,7 @@ You can set AWS/Azure Credentials on .env file following .envexample, you can ch
 
 OpenTofu is a open source fork of terraform since hashicorp has made it a non-open source anymore,
 you may find more details in https://www.linuxfoundation.org/press/announcing-opentofu
+Remember also to check OpenTofu official repository: https://github.com/opentofu/opentofu
 
 ## using opentofu
 
