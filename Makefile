@@ -43,13 +43,14 @@ ifeq ($(strip $(ARM_CLIENT_SECRET)),)
 endif
 
 
-help: ## Mostra esse helper.
+help: ## Show this helper.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 build: ## build docker image
 	docker build --build-arg TOFUVERSION=$(TOFUVERSION) -t myopentofu:$(TOFUVERSION) .
 
-run:: build ## Executa CLi da azure em docker
+## run: run the docker image
+run:: build 
 	docker run -it -v ${PWD}:/app \
 				-e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) \
 				-e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) \
