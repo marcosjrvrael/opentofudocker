@@ -13,7 +13,7 @@ endif
 # Set default values if .env is empty or not exist.
 
 ifeq ($(strip $(TOFUVERSION)),)
-  TOFUVERSION := $(shell curl -sL https://releases.hashicorp.com/terraform/index.json | jq -r '.versions[].builds[].version' | egrep -v 'rc|beta|alpha' | tail -1)
+  TOFUVERSION := $(shell curl -s https://api.github.com/repos/opentofu/opentofu/releases/latest | jq -r '.tag_name' | sed 's/^v//')
 endif
 
 # aws
@@ -49,7 +49,7 @@ help: ## Show this helper.
 build: ## build docker image
 	docker build --build-arg TOFUVERSION=$(TOFUVERSION) -t myopentofu:$(TOFUVERSION) .
 
-## run: run the docker image
+##run: run the docker image
 run:: build 
 	docker run -it -v ${PWD}:/app \
 				-e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID) \

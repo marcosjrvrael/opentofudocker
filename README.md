@@ -30,3 +30,7 @@ now
 
 And so on...
 
+## Makefile
+
+The main command is `make run`
+To check the other commands open makefile archive or type `make help`
