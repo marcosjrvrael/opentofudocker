@@ -30,6 +30,8 @@ now
 
 And so on...
 
+`in the docker image there is an alias to use terraform command if you prefer, so both will work tofu and terraform`
+
 ## Makefile
 
 The main command is `make run`
