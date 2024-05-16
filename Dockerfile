@@ -28,4 +28,6 @@ RUN mkdir /opentofu \
     && mv /opentofu/tofu /usr/local/bin/ \
     && tofu -install-autocomplete
 
-WORKDIR /app
+RUN echo "alias terraform=tofu" >> ~/.bashrc
+
+WORKDIR /app/tofu
